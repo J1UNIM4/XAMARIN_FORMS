@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App5.Page1">
+    <ScrollView >
+        <StackLayout>
+            <Entry Text="BIENVENIDO" VerticalOptions="Start" HorizontalOptions="Start" FontSize="Title" FontAttributes="Bold"></Entry>
+
+
+
+            <Label Text="NOMBRE: " Padding="0,20,0,0"></Label>
+            <Entry Placeholder="Ingresa tu nombre" Keyboard="Text" x:Name="Fname"></Entry>
+
+            <Label Text="Apellido: " Padding="0,10,0,0"></Label>
+            <Entry Placeholder="Ingresa tu Apellido" Keyboard="Text" x:Name="Lname"></Entry>
+
+            <Label Text="Telefono: " Padding="0,10,0,0"></Label>
+            <Entry Keyboard="Telephone" x:Name="phone"></Entry>
+
+            <Label Text="Pais: " Padding="0,10,0,0"></Label>
+            <Entry Keyboard="Text" Placeholder="Ingresa tu Pais" x:Name="country"></Entry>
+
+
+            <StackLayout x:Name="Idioms_i" >
+                <Label Text="Idiomas: " Padding="0,10,0,0"></Label>
+                <Entry Keyboard="Text" ></Entry>
+            </StackLayout>
+            <Button Text=" + " BackgroundColor="LightCyan" Clicked="Button_Clicked_plus_i"></Button>
+
+            <StackLayout x:Name="Aptitudes_i">
+                <Label Text="Aptitudes: " Padding="0,10,0,0"></Label>
+                <Entry Keyboard="Text" ></Entry>
+            </StackLayout>
+            <Button Text=" + " BackgroundColor="LightCyan" Clicked="Button_Clicked_plus_a"></Button>
+
+            <StackLayout x:Name="Skills_i">
+                <Label Text="Skills: " Padding="0,10,0,0"></Label>
+                <Entry Keyboard="Text" ></Entry>
+            </StackLayout>
+            <Button Text=" + " BackgroundColor="LightCyan" Clicked="Button_Clicked_plus_s"></Button>
+
+            <Label Text="Experiencia: " Padding="0,10,0,0"></Label>
+            <Entry Keyboard="Text" ></Entry>
+
+            <Button Text="Enviar" Background="Blue" TextColor="White" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+
+    </ScrollView>
+</ContentPage>
