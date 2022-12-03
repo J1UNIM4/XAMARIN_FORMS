@@ -35,12 +35,12 @@
 
             <StackLayout x:Name="Skills_i">
                 <Label Text="Skills: " Padding="0,10,0,0"></Label>
-                <Entry Keyboard="Text" ></Entry>
+                <Entry Keyboard="Text" x:Name="NEW"></Entry>
             </StackLayout>
             <Button Text=" + " BackgroundColor="LightCyan" Clicked="Button_Clicked_plus_s"></Button>
 
             <Label Text="Experiencia: " Padding="0,10,0,0"></Label>
-            <Entry Keyboard="Text" ></Entry>
+            <Editor Keyboard="Text" x:Name="Edit"></Editor>
 
             <Button Text="Enviar" Background="Blue" TextColor="White" Clicked="Button_Clicked"></Button>
         </StackLayout>
