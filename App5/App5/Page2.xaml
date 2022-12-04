@@ -13,18 +13,47 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-
+            
+            <!--Title-->
             <Image Source="+" Grid.Row="0" Grid.Column="0"></Image>
             <StackLayout Orientation="Vertical">
                 <Label Text="{Binding Fname}"></Label>
                 <Entry IsReadOnly="True" Text="BUSCADO/OCUPADO"></Entry>
             </StackLayout>
                 
+            <!--Body-->
+            
+            <!--Ap-Skill-idiom-->
             <StackLayout Grid.Column="1" Grid.Row="0">
-                    
+                <Label Text="Contacto"></Label>
+                <!--to complete-->
+                <Label Text="Idiomas"></Label>
+                <!--to complete-->
+                <Label Text="Aptitudes"></Label>
+                <!--to complete-->
+                <Label Text="Habilidades"></Label>
+                <!--to complete-->
+                <Label Text="Otros Intereses"></Label>
+                <!--to complete-->
             </StackLayout>
             
+            <!--Content-->
             <StackLayout Grid.Column="1" Grid.Row="1">
+                <Label Text="Perfil"></Label>
+                <!--to complete-->
+                <Label Text="Experiencia Laboral"></Label>
+
+                <Label Text="Machine Learning Engineer"></Label>
+                <!--to complete-->
+                <Label Text="Data Scientist"></Label>
+                <!--to complete-->
+                <Label Text="Data Engineer"></Label>
+                <!--to complete-->
+
+
+                <Label Text="Formacion"></Label>
+                <!--to complete-->
+                
                 
             </StackLayout>
         </Grid>

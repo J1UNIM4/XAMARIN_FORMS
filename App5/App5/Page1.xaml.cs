@@ -41,22 +41,31 @@ namespace App5
 
         private void Button_Clicked_plus_i(object sender, EventArgs e)
         {
-            var entry = new Entry();
-            Idioms_i.Children.Add(entry);
+            Items_i.Add(NEW_i.Text);
+            //delete Property "X:NAME or change"
+
+            Idioms_i.Children.Add(new Entry()
+            {
+                //Ass property "x:Name = NEW_i"
+            });
         }
         private void Button_Clicked_plus_a(object sender, EventArgs e)
         {
-            var entry = new Entry();
-            Aptitudes_i.Children.Add(entry);
+            Items_a.Add(NEW_a.Text);
+            //delete Property "X:NAME or change"
+
+            Aptitudes_i.Children.Add(new Entry()
+            {
+                //Ass property "x:Name = NEW_a"
+            });
         }
         private void Button_Clicked_plus_s(object sender, EventArgs e)
         {
-            Items_s.Add(NEW.Text);
-            //delete Property "X:NAME"
-
+            Items_s.Add(NEW_i.Text);
+            //delete Property "X:NAME or change"
 
             Skills_i.Children.Add(new Entry(){
-                //Ass property "x:Name = NEW"
+                //Ass property "x:Name = NEW_s"
             });
         }
     }

@@ -23,19 +23,19 @@
 
             <StackLayout x:Name="Idioms_i" >
                 <Label Text="Idiomas: " Padding="0,10,0,0"></Label>
-                <Entry Keyboard="Text" ></Entry>
+                <Entry Keyboard="Text" x:Name="NEW_i"></Entry>
             </StackLayout>
             <Button Text=" + " BackgroundColor="LightCyan" Clicked="Button_Clicked_plus_i"></Button>
 
             <StackLayout x:Name="Aptitudes_i">
                 <Label Text="Aptitudes: " Padding="0,10,0,0"></Label>
-                <Entry Keyboard="Text" ></Entry>
+                <Entry Keyboard="Text" x:Name="NEW_a"></Entry>
             </StackLayout>
             <Button Text=" + " BackgroundColor="LightCyan" Clicked="Button_Clicked_plus_a"></Button>
 
             <StackLayout x:Name="Skills_i">
                 <Label Text="Skills: " Padding="0,10,0,0"></Label>
-                <Entry Keyboard="Text" x:Name="NEW"></Entry>
+                <Entry Keyboard="Text" x:Name="NEW_s"></Entry>
             </StackLayout>
             <Button Text=" + " BackgroundColor="LightCyan" Clicked="Button_Clicked_plus_s"></Button>
 
