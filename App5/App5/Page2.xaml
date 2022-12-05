@@ -3,58 +3,93 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App5.Page2">
     <ContentPage.Content>
-        <Grid BackgroundColor="Brown">
-            <Grid.RowDefinitions >
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
+        <Grid BackgroundColor="Brown" Padding="30,30,30,30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"></RowDefinition>
+                <RowDefinition Height="500"></RowDefinition>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="90"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             
             <!--Title-->
-            <Image Source="+" Grid.Row="0" Grid.Column="0"></Image>
-            <StackLayout Orientation="Vertical">
-                <Label Text="{Binding Fname}"></Label>
-                <Entry IsReadOnly="True" Text="BUSCADO/OCUPADO"></Entry>
+            <Image Source="https://www.tbsnews.net/sites/default/files/styles/big_2/public/images/2020/12/29/billgates_collected.png" Grid.Row="0" Grid.Column="0"></Image>
+            <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" BackgroundColor="Black">
+                <Label Text="{Binding FnameLname}" TextColor="White"></Label>
+                <Entry IsReadOnly="True" Text="BUSCADO/OCUPADO" TextColor="White"></Entry>
             </StackLayout>
-                
             <!--Body-->
             
-            <!--Ap-Skill-idiom-->
-            <StackLayout Grid.Column="1" Grid.Row="0">
-                <Label Text="Contacto"></Label>
-                <!--to complete-->
-                <Label Text="Idiomas"></Label>
-                <!--to complete-->
-                <Label Text="Aptitudes"></Label>
-                <!--to complete-->
-                <Label Text="Habilidades"></Label>
-                <!--to complete-->
-                <Label Text="Otros Intereses"></Label>
-                <!--to complete-->
+            
+            <!--Aptitud-Skill-idiom-->
+            <StackLayout Grid.Row="1" Grid.Column="0" BackgroundColor="Bisque">
+                <Entry IsReadOnly="True" Text="Contacto" FontSize="Body"></Entry>
+                <Label Text="{Binding Phone}"></Label>
+                <Label Text="EMAIL@gmail.com"></Label>
+                <Label Text="{Binding country}"></Label>         
+              
+                                   
+
+                <Entry IsReadOnly="True" Text="Idiomas" FontSize="Body"></Entry>
+                <ListView ItemsSource="{Binding idioms}"></ListView>
+
+                <Entry IsReadOnly="True" Text="Aptitudes" FontSize="Body"></Entry>
+                <ListView ItemsSource="{Binding aptitudes}"></ListView>
+                
+                <Entry IsReadOnly="True" Text="Habilidades" FontSize="Body"></Entry>
+                <ListView ItemsSource="{Binding skills}"></ListView>
+                
+                <Editor Margin="3" IsReadOnly="True" Text="Otros Intereses" FontSize="Caption"></Editor>
+                <Label Text="Play videogames"></Label>
+                <Label Text="Exercise"></Label>
+                <Label Text="ParKour"></Label>
+                    <!--to complete-->
             </StackLayout>
             
             <!--Content-->
-            <StackLayout Grid.Column="1" Grid.Row="1">
-                <Label Text="Perfil"></Label>
-                <!--to complete-->
-                <Label Text="Experiencia Laboral"></Label>
-
-                <Label Text="Machine Learning Engineer"></Label>
-                <!--to complete-->
-                <Label Text="Data Scientist"></Label>
-                <!--to complete-->
-                <Label Text="Data Engineer"></Label>
-                <!--to complete-->
-
-
-                <Label Text="Formacion"></Label>
-                <!--to complete-->
+            <StackLayout Grid.Row="1" Grid.Column="1" BackgroundColor="WhiteSmoke">
+                <Entry Text="Perfil"></Entry>
+                <Editor Text="{Binding experience}"></Editor>
+                <Entry Text="Experiencia Laboral"></Entry>
+                  
+                <Entry Text="Machine Learning Engineer" FontSize="Subtitle"></Entry>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="EEUU"></Label>
+                    <Label Text=" | 2030 - Actualmente" TextColor="Gray"></Label>
+                </StackLayout>
                 
-                
+                <!--to complete-->
+                <Entry Text="Data Scientist" FontSize="Subtitle"></Entry>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="EEUU"></Label>
+                    <Label Text=" | 2025 - 2028" TextColor="Gray"></Label>
+                </StackLayout>
+                <!--to complete-->
+
+                <Entry Text="Data Engineer" FontSize="Subtitle"></Entry>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="EEUU"></Label>
+                    <Label Text=" | 2022 - 2024" TextColor="Gray"></Label>
+                </StackLayout>
+                <!--to complete-->
+
+
+                <Entry Text="Formacion"></Entry>
+                <Label Text="GRADO DE DATA SCIENCE"></Label>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="ESMA,Madrid"></Label>
+                    <Label Text=" | 2018-2022" TextColor="Gray"></Label>
+                </StackLayout>
+                <Label Text="Licenciatura Profesional"></Label>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="UCSP,Peru"></Label>
+                    <Label Text=" |2015-2018" TextColor="Gray"></Label>
+                </StackLayout>
+
+
+
             </StackLayout>
         </Grid>
         

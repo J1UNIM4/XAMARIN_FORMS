@@ -41,31 +41,60 @@ namespace App5
 
         private void Button_Clicked_plus_i(object sender, EventArgs e)
         {
-            Items_i.Add(NEW_i.Text);
-            //delete Property "X:NAME or change"
+            foreach (var item in Idioms_i.Children)
+            {
+                if (item.StyleId == "1")
+                {
+                    var entry_new = new Entry();
+                    entry_new = (Entry)item;
+
+                    Items_i.Add(entry_new.ToString());
+                    item.StyleId = "0";
+                }
+            }
+            NEW_i.StyleId = "0";
 
             Idioms_i.Children.Add(new Entry()
             {
-                //Ass property "x:Name = NEW_i"
+                StyleId = "1"
             });
         }
         private void Button_Clicked_plus_a(object sender, EventArgs e)
         {
-            Items_a.Add(NEW_a.Text);
-            //delete Property "X:NAME or change"
-
+            foreach (var item in Aptitudes_i.Children)
+            {
+                if (item.StyleId == "1")
+                {
+                    var entry_new = new Entry();
+                    entry_new = (Entry)item;
+                    Items_a.Add(entry_new.ToString());
+                    item.StyleId = "0";
+                }
+            }
+            NEW_a.StyleId = "0";
+            
             Aptitudes_i.Children.Add(new Entry()
             {
-                //Ass property "x:Name = NEW_a"
+                StyleId = "1"
             });
         }
         private void Button_Clicked_plus_s(object sender, EventArgs e)
         {
-            Items_s.Add(NEW_i.Text);
-            //delete Property "X:NAME or change"
+            foreach (var item in Skills_i.Children)
+            {
+                if (item.StyleId == "1")
+                {
+                    var entry_new = new Entry();
+                    entry_new = (Entry)item;
+                    Items_s.Add(entry_new.ToString());
+                    item.StyleId = "0";
+                }
+            }
+            NEW_s.StyleId = "0";
 
-            Skills_i.Children.Add(new Entry(){
-                //Ass property "x:Name = NEW_s"
+            Skills_i.Children.Add(new Entry()
+            {
+                StyleId = "1"
             });
         }
     }

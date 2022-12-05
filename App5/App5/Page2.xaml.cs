@@ -12,11 +12,13 @@ namespace App5
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page2 : ContentPage
     {
+                
         public Page2(Curriculum curriculo)
         {
-            InitializeComponent();
-            BindingContext = curriculo;
+          InitializeComponent();
+          BindingContext = curriculo;
 
         }
+       
     }
 }
