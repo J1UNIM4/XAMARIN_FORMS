@@ -5,7 +5,7 @@ namespace App5
     public class Curriculum
     {
         public string Fname { get; set; }
-        public string LName { get; set; }
+        public string Lname { get; set; }
         public string phone { get; set; }
         public string country { get; set; }
         public List<string> idioms { get; set; }

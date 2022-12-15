@@ -26,7 +26,7 @@ namespace App5
             var curriculo = new Curriculum()
             {
                 Fname = Fname.Text,
-                LName = Lname.Text,
+                Lname = Lname.Text,
                 phone = phone.Text,
                 country = country.Text,
                 idioms = Items_i,
@@ -35,67 +35,46 @@ namespace App5
                 experience = Edit.Text
                 
             };
-
-            Navigation.PushAsync(new Page2(curriculo));
+            var Pag2 = new Page2();
+            Pag2.BindingContext = curriculo;
+            Navigation.PushAsync(Pag2);
         }
 
-        private void Button_Clicked_plus_i(object sender, EventArgs e)
+        public void Button_Clicked_plus_i(object sender, EventArgs e) 
         {
-            foreach (var item in Idioms_i.Children)
-            {
-                if (item.StyleId == "1")
-                {
-                    var entry_new = new Entry();
-                    entry_new = (Entry)item;
 
-                    Items_i.Add(entry_new.ToString());
-                    item.StyleId = "0";
-                }
-            }
-            NEW_i.StyleId = "0";
+            Entry new_entry = new Entry();
 
-            Idioms_i.Children.Add(new Entry()
-            {
-                StyleId = "1"
-            });
+            new_entry = (Entry)Idioms_i.Children.Last();
+
+            Items_i.Add(new_entry.Text);
+
+
+            Idioms_i.Children.Add(new Entry());
         }
-        private void Button_Clicked_plus_a(object sender, EventArgs e)
+        public void Button_Clicked_plus_a(object sender, EventArgs e)
         {
-            foreach (var item in Aptitudes_i.Children)
-            {
-                if (item.StyleId == "1")
-                {
-                    var entry_new = new Entry();
-                    entry_new = (Entry)item;
-                    Items_a.Add(entry_new.ToString());
-                    item.StyleId = "0";
-                }
-            }
-            NEW_a.StyleId = "0";
             
-            Aptitudes_i.Children.Add(new Entry()
-            {
-                StyleId = "1"
-            });
-        }
-        private void Button_Clicked_plus_s(object sender, EventArgs e)
-        {
-            foreach (var item in Skills_i.Children)
-            {
-                if (item.StyleId == "1")
-                {
-                    var entry_new = new Entry();
-                    entry_new = (Entry)item;
-                    Items_s.Add(entry_new.ToString());
-                    item.StyleId = "0";
-                }
-            }
-            NEW_s.StyleId = "0";
+            Entry new_entry = new Entry();
 
-            Skills_i.Children.Add(new Entry()
-            {
-                StyleId = "1"
-            });
+            new_entry =(Entry)Aptitudes_i.Children.Last();
+
+            Items_a.Add(new_entry.Text);
+
+            
+            Aptitudes_i.Children.Add(new Entry());
+        }
+        public void Button_Clicked_plus_s(object sender, EventArgs e)
+        {
+
+            Entry new_entry = new Entry();
+
+            new_entry = (Entry)Skills_i.Children.Last();
+
+            Items_s.Add(new_entry.Text);
+
+
+            Skills_i.Children.Add(new Entry());
         }
     }
 }

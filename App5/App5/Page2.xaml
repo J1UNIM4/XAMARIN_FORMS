@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             
              x:Class="App5.Page2">
     <ContentPage.Content>
         <Grid BackgroundColor="Brown" Padding="30,30,30,30">
@@ -13,9 +15,10 @@
                 <ColumnDefinition Width="90"></ColumnDefinition>
                 <ColumnDefinition Width="2*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            
+
+
             <!--Title-->
-            <Image Source="https://www.tbsnews.net/sites/default/files/styles/big_2/public/images/2020/12/29/billgates_collected.png" Grid.Row="0" Grid.Column="0"></Image>
+            <controls:CircleImage Source="https://www.tbsnews.net/sites/default/files/styles/big_2/public/images/2020/12/29/billgates_collected.png" Grid.Row="0" Grid.Column="0"></controls:CircleImage>
             <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="1" BackgroundColor="Black">
                 <Label Text="{Binding FnameLname}" TextColor="White"></Label>
                 <Entry IsReadOnly="True" Text="BUSCADO/OCUPADO" TextColor="White"></Entry>

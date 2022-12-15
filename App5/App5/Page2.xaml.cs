@@ -13,11 +13,9 @@ namespace App5
     public partial class Page2 : ContentPage
     {
                 
-        public Page2(Curriculum curriculo)
+        public Page2()
         {
           InitializeComponent();
-          BindingContext = curriculo;
-
         }
        
     }
